@@ -3,6 +3,17 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	color: var(--heading-color);
+	font-family: "Raleway", sans-serif;
+}
 
 body {
 	margin: 0;
@@ -16,13 +27,45 @@ body {
 	text-align: left;
 	background-color: #fff;
 }
+header::before {
+	content: "";
+	background: linear-gradient(75deg, rgb(6 6 6 / 64%) 8%, transparent);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
+p {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 28px;
+	color: #707070;
+	letter-spacing: 0.4px;
+}
+header {
+	background-image: linear-gradient(75deg, rgb(6 6 6 / 64%) 8%, transparent),
+		url("/images/heading-banner.jpg");
+	height: 100vh;
+	background-size: cover;
+}
+
+.color-white,
+.fa-moon,
+.fa-paw {
+	color: #fff;
+}
 
 .head-top {
 	display: flex;
+	padding: 1.5em 3%;
 }
 .logo {
 	display: flex;
 	flex-basis: 50%;
+	align-items: center;
 }
 .flex-space {
 	display: flex;
@@ -43,9 +86,99 @@ body {
 }
 .nav-items li a {
 	text-decoration: none;
+	color: #fff;
 }
 .search-bar {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-left: 1em;
+}
+
+.searchIcon {
+	position: absolute;
+	right: 5rem;
+}
+.search-bar i {
+	margin-left: 10%;
+}
+
+.search-bar input {
+	border-radius: 2em;
+	padding: 1em;
+	height: 2.5em;
+	width: auto;
+}
+.searchIcon {
+	color: orange;
+}
+
+.header-bottom {
+	max-width: 80%;
+	/* margin: auto; */
+	margin-top: 12%;
+	margin-left: 12%;
+}
+
+.title h3 {
+	font-size: 50px;
+	line-height: 65px;
+	font-weight: 300;
+	width: 45%;
+}
+
+.lead {
+	font-size: 1.25rem;
+	font-weight: 300;
+}
+.header-buttons {
+	margin: 1rem;
+}
+.white-button {
+	background-color: #fff;
+	border: none;
+	border-radius: 0.3rem;
+	margin: 0.5rem;
+}
+
+.hire {
+	background-color: transparent;
+	border-radius: 0.3rem;
+	margin: 0.5rem;
+	color: #fff;
+}
+.btn-white {
+	padding: 12px 30px;
+	font-weight: 600;
+	font-size: 14px;
+	transition: all 0.25s ease-in-out;
+	cursor: pointer;
+	border: 1px solid #fff;
+}
+
+.about-content {
+	display: flex;
+	flex-direction: column;
+	max-width: 50%;
+	padding: 0 4%;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.about-us {
+	padding: 7% 3%;
+	justify-content: space-around !important;
+	flex-wrap: wrap;
+}
+.card h4 {
+	font-weight: 600;
+}
+
+.content-desc {
+	margin-top: 4rem;
+}
+.c-title {
+	font-size: 35px;
+	line-height: 45px;
+	font-weight: 600;
 }
