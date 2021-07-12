@@ -26,6 +26,7 @@ body {
 	color: #212529;
 	text-align: left;
 	background-color: #fff;
+	/* font-family: "Raleway", sans-serif; */
 }
 header::before {
 	content: "";
@@ -126,19 +127,22 @@ header {
 	font-weight: 300;
 	width: 45%;
 }
-
+.title h3 {
+	margin-bottom: 1rem;
+}
 .lead {
 	font-size: 1.25rem;
 	font-weight: 300;
 }
 .header-buttons {
-	margin: 1rem;
+	margin: 2rem 0;
 }
 .white-button {
 	background-color: #fff;
 	border: none;
 	border-radius: 0.3rem;
 	margin: 0.5rem;
+	margin-left: 0 !important;
 }
 
 .hire {
@@ -181,4 +185,76 @@ header {
 	font-size: 35px;
 	line-height: 45px;
 	font-weight: 600;
+}
+
+#services {
+	background-color: #fafafa;
+	text-align: center;
+	padding: 3rem 0;
+}
+.service-title {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	color: var(--heading-color);
+	font-family: "Raleway", sans-serif;
+	margin-bottom: 3rem;
+}
+
+.service-title p {
+	width: inherit;
+	letter-spacing: 0.4px;
+	margin: auto;
+	line-height: 1.6;
+	text-align: center !important;
+}
+
+.service-cards {
+	display: flex;
+	justify-content: space-around;
+	width: 80%;
+	margin: auto;
+}
+.service-card {
+	width: 31%;
+	text-align: left;
+	border: 1px solid inherit;
+	background-color: #fff;
+}
+
+.service-text {
+	padding: 1rem;
+}
+.service-card img {
+	width: 100%;
+}
+
+.red-read-more {
+	padding: 0;
+	color: #f85a40;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-top: 20px;
+}
+
+.service-card a {
+	text-decoration: none;
+}
+.sid {
+	color: black;
+	font-size: 22px;
+	margin-bottom: 10px;
+	display: block;
+	font-weight: 600;
+}
+
+.service-text p {
+	margin-bottom: 1rem;
+}
+
+.service-title h3 {
+	margin-bottom: 0.5rem !important;
+	font-family: "Raleway", sans-serif !important;
+	font-weight: 800;
 }
