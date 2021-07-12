@@ -548,3 +548,25 @@ header {
 .footer-para p {
 	color: #d4d4d4;
 }
+
+.footer hr {
+	width: 80%;
+	margin: 3rem 0;
+}
+.footer a {
+	text-decoration: none;
+	color: #f85a40;
+}
+
+.social-icons {
+	display: flex;
+	justify-content: space-between;
+}
+.social-icons li {
+	list-style: none;
+	margin: 0 1.5rem;
+	cursor: pointer;
+}
+.social-icons li i {
+	color: #fff;
+}
