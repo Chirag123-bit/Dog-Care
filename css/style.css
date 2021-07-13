@@ -57,6 +57,7 @@ header {
 .fa-moon,
 .fa-paw {
 	color: #fff;
+	margin-top: 1rem;
 }
 
 .head-top {
@@ -135,7 +136,7 @@ header {
 	margin-bottom: 1rem;
 }
 .lead {
-	font-size: 1.25rem;
+	font-size: 1.35rem;
 	font-weight: 300;
 }
 .header-buttons {
@@ -154,14 +155,27 @@ header {
 	border-radius: 0.3rem;
 	margin: 0.5rem;
 	color: #fff;
+	transition: all 0.5s ease-in-out;
+}
+
+.hire:hover {
+	background-color: #fff !important;
+	color: black !important;
+	transition: all 0.5s ease-in-out !important;
 }
 .btn-white {
-	padding: 12px 30px;
+	padding: 1rem;
 	font-weight: 600;
 	font-size: 14px;
-	transition: all 0.25s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	cursor: pointer;
 	border: 1px solid #fff;
+}
+
+.btn-white:hover {
+	transition: all 0.5s ease-in-out;
+	background: transparent;
+	color: #fff;
 }
 
 .about-content {
@@ -174,16 +188,31 @@ header {
 }
 
 .about-us {
-	padding: 7% 3%;
+	padding: 7% 0;
 	justify-content: space-around !important;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
+	width: 80%;
+	margin: auto;
+}
+.card {
+	margin: 0 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.card i {
+	color: #f85a40 !important;
 }
 .card h4 {
+	margin-top: 1rem;
 	font-weight: 600;
 }
 
 .content-desc {
 	margin-top: 4rem;
+	/* border: 1px solid red; */
+	align-content: flex-start;
 }
 .c-title {
 	font-size: 35px;
@@ -220,10 +249,19 @@ header {
 	margin: auto;
 }
 .service-card {
+	transition: 0.3s ease;
 	width: 31%;
 	text-align: left;
 	border: 1px solid inherit;
 	background-color: #fff;
+	border: 1px solid #fff;
+}
+
+.service-card:hover {
+	box-shadow: 0 15px 15px 0 rgb(10 16 34 / 20%);
+	background: #fff;
+	border-radius: 15px;
+	transition: 0.3s ease;
 }
 
 .service-text {
@@ -567,6 +605,7 @@ header {
 	margin: 0 1.5rem;
 	cursor: pointer;
 }
-.social-icons li i {
+.social-icons li i,
+.header-bottom .lead {
 	color: #fff;
 }
