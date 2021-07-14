@@ -28,15 +28,8 @@ body {
   background-color: #fff;
   /* font-family: "Raleway", sans-serif; */
 }
-header::before {
-  content: "";
-  background: linear-gradient(75deg, rgb(6 6 6 / 64%) 8%, transparent);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
+.search-bar .far {
+  margin-bottom: 1em;
 }
 p {
   margin: 0;
@@ -47,10 +40,11 @@ p {
   letter-spacing: 0.4px;
 }
 header {
+  min-width: 100%;
   background-image: linear-gradient(75deg, rgb(6 6 6 / 64%) 8%, transparent),
     url("/images/heading-banner.jpg");
-  height: 100vh;
   background-size: cover;
+  position: relative;
 }
 
 .color-white,
@@ -60,9 +54,15 @@ header {
   margin-top: 1rem;
 }
 
-.head-top {
+#head-top {
   display: flex;
   padding: 1.5em 3%;
+  top: 50px;
+  transition: all 0.5s;
+  transition: 0.4s;
+  width: 100%;
+  top: 0;
+  z-index: 100000;
 }
 .logo {
   display: flex;
@@ -71,7 +71,64 @@ header {
 }
 .logo i {
   color: #f85a40;
-  margin: 5px;
+  margin: 5px 5px -5px 5px;
+}
+
+.hidden {
+  padding: 1rem 1rem 0 1rem;
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  margin-top: 0.7em;
+  transform: translateX(-25px);
+  background: transparent;
+  border: 1px solid #fff;
+  box-shadow: rgb(12 12 12 / 6%) 0px 1px 20px 0px;
+}
+
+#seen:hover .hidden {
+  display: block !important;
+}
+
+.hidden ul li {
+  padding: 1em;
+  padding-bottom: 1.5em;
+}
+
+#head-top.sticky .searchIcon {
+  right: 3rem;
+}
+#head-top.sticky {
+  justify-content: center;
+  position: fixed;
+  padding: 0.25rem 1rem;
+  background-color: #fff;
+  color: black;
+}
+#head-top.sticky a:hover,
+#head-top a:hover,
+.active {
+  padding-bottom: 0.75rem;
+  color: #f85a40;
+  border-bottom: 1px solid #f85a40;
+}
+
+#head-top.sticky .hidden a {
+  color: #f85a40;
+}
+
+#head-top.sticky .hidden {
+  background-color: #fff !important;
+}
+
+#head-top.sticky a,
+#head-top.sticky h1,
+#head-top.sticky .far {
+  color: black;
+}
+
+#head-top.sticky .far {
+  margin-right: 15px;
 }
 .flex-space {
   display: flex;
@@ -95,15 +152,15 @@ header {
   color: #fff;
 }
 .search-bar {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-left: 1em;
 }
 
 .searchIcon {
   position: absolute;
-  right: 5rem;
+  right: 3rem;
 }
 .search-bar i {
   margin-left: 10%;
@@ -121,9 +178,9 @@ header {
 
 .header-bottom {
   max-width: 80%;
-  /* margin: auto; */
-  margin-top: 12%;
-  margin-left: 12%;
+  margin: auto;
+  padding-top: 12%;
+  padding-bottom: 8%;
 }
 
 .title h3 {
@@ -131,10 +188,9 @@ header {
   line-height: 65px;
   font-weight: 300;
   width: 45%;
-}
-.title h3 {
   margin-bottom: 1rem;
 }
+
 .lead {
   font-size: 1.35rem;
   font-weight: 300;
@@ -408,38 +464,12 @@ header {
   width: auto;
 }
 
-.small-image .hover-gradient {
-  overflow: hidden;
-  position: relative;
-}
-
-.small-image .hover-gradient:hover {
-  position: absolute;
-  top: 0;
-  left: -75%;
-  z-index: 2;
-  display: block;
-  content: "";
-  width: 50%;
-  height: 100%;
-  background: -webkit-linear-gradient(
-    left,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 100%
-  );
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 100%
-  );
-  /* transform: skewX(-17deg); */
-}
-
 .merge-class {
   display: flex;
 }
 
-.small-image {
+.small-image,
+figure {
   width: 100%;
   height: 100%;
 }
@@ -642,11 +672,4 @@ img,
 a,
 li {
   cursor: pointer;
-}
-img:hover {
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 100%
-  );
 }

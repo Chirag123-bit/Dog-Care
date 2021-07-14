@@ -14,21 +14,31 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;1,500&display=swap"
       rel="stylesheet"
     />
+    <script src="/javascript/nav-bar.js"></script>
   </head>
 
   <body>
     <header>
-      <div class="head-top">
+      <div id="head-top">
         <div class="logo">
           <i class="fas fa-paw fa-2x"></i>
           <h1 class="color-white">Dogs Care</h1>
         </div>
         <div class="nav-bar flex-space">
           <div class="nav-items flex-space">
-            <li><a href="#">HOME</a></li>
+            <li><a href="#" class="active">HOME</a></li>
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">SERVICES</a></li>
-            <li><a href="#">PAGES</a></li>
+            <li id="seen">
+              <a href="#">PAGES </a>
+              <div class="hidden">
+                <ul>
+                  <li><a href="#">BLOG POSTS</a></li>
+                  <li><a href="#">404 PAGE</a></li>
+                  <li><a href="#">LANDING PAGE</a></li>
+                </ul>
+              </div>
+            </li>
             <li><a href="#">CONTACT</a></li>
           </div>
 
@@ -212,46 +222,78 @@
         <div class="gallary-image-section">
           <div class="section-one">
             <div class="small-image">
-              <div class="hover-gradient"></div>
-              <img src="/images/dog1.jpg" alt="Dog1" />
+              <a href="/images/dog1.jpg">
+                <figure>
+                  <img src="/images/dog1.jpg" alt="Dog1" />
+                </figure>
+                <div class="overlay"></div>
+              </a>
+            </div>
+            <div class="images">
+              <div class="small-image">
+                <a href="/images/dog2.jpg">
+                  <figure>
+                    <img src="/images/dog2.jpg" alt="Dog1" />
+                    <div class="overlay"></div>
+                  </figure>
+                </a>
+              </div>
             </div>
             <div class="small-image">
-              <div class="hover-gradient"></div>
-              <img src="/images/dog2.jpg" alt="Dog2" />
-            </div>
-            <div class="small-image">
-              <div class="hover-gradient"></div>
-              <img src="/images/dog3.jpg" alt="Dog3" />
+              <a href="/images/dog3.jpg">
+                <figure>
+                  <img src="/images/dog3.jpg" alt="Dog1" />
+                  <div class="overlay"></div>
+                </figure>
+              </a>
             </div>
           </div>
           <div class="section-two">
             <div class="merge-class">
               <div class="small-image">
-                <div class="hover-gradient"></div>
-                <img src="/images/dog4.jpg" alt="Dog4" />
+                <a href="/images/dog4.jpg">
+                  <figure>
+                    <img src="/images/dog4.jpg" alt="Dog1" />
+                  </figure>
+                </a>
               </div>
               <div class="small-image">
-                <div class="hover-gradient"></div>
-                <img src="/images/dog5.jpg" alt="Dog5" />
+                <a href="/images/dog5.jpg">
+                  <figure>
+                    <img src="/images/dog5.jpg" alt="Dog1" />
+                  </figure>
+                </a>
               </div>
             </div>
             <div class="small-image">
-              <div class="hover-gradient"></div>
-              <img src="/images/dog6.jpg" alt="Dog6" />
+              <a href="/images/dog6.jpg">
+                <figure>
+                  <img src="/images/dog6.jpg" alt="Dog1" />
+                </figure>
+              </a>
             </div>
           </div>
           <div class="section-three">
             <div class="small-image">
-              <div class="hover-gradient"></div>
-              <img src="/images/dog7.jpg" alt="Dog7" />
-            </div>
-            <div class="image">
-              <div class="hover-gradient"></div>
-              <img src="/images/dog8.jpg" alt="Dog8" />
+              <a href="/images/dog7.jpg">
+                <figure>
+                  <img src="/images/dog7.jpg" alt="Dog1" />
+                </figure>
+              </a>
             </div>
             <div class="small-image">
-              <div class="hover-gradient"></div>
-              <img src="/images/dog9.jpg" alt="Dog9" />
+              <a href="/images/dog8.jpg">
+                <figure>
+                  <img src="/images/dog8.jpg" alt="Dog1" />
+                </figure>
+              </a>
+            </div>
+            <div class="small-image">
+              <a href="/images/dog9.jpg">
+                <figure>
+                  <img src="/images/dog9.jpg" alt="Dog1" />
+                </figure>
+              </a>
             </div>
           </div>
         </div>
