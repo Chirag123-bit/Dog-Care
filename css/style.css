@@ -16,6 +16,7 @@ h6 {
 }
 
 body {
+  transition: all 0.5s;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
@@ -30,6 +31,12 @@ body {
 }
 .search-bar .far {
   margin-bottom: 1em;
+}
+#moving-text {
+  opacity: 1;
+  font-weight: 900;
+  font-size: 55px;
+  line-height: 65px;
 }
 p {
   margin: 0;
@@ -181,6 +188,153 @@ header {
   margin: auto;
   padding-top: 12%;
   padding-bottom: 8%;
+}
+
+@media screen and (max-width: 880px) {
+  .about-us {
+    flex-direction: column;
+    width: 100% !important;
+    text-align: center;
+  }
+  .about-content {
+    min-width: 100% !important;
+    padding: 2rem 0 !important;
+  }
+  .title h3 {
+    width: 80% !important;
+  }
+
+  .title .btn-white {
+    margin-right: 5rem !important;
+  }
+  .c-title {
+    padding-bottom: 1rem;
+  }
+
+  .image-container img {
+    width: 100%;
+  }
+
+  .training {
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .task {
+    width: max-content;
+    padding-right: 0 !important;
+  }
+
+  .task p {
+    width: 70%;
+  }
+
+  .dog-image {
+    text-align: center;
+  }
+
+  .dog-tasks,
+  .task h6,
+  .task p {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .pet-content {
+    width: 100% !important;
+    text-align: center;
+  }
+  .pet-content h4 {
+    padding-bottom: 1.2em;
+  }
+
+  .limit-width {
+    max-width: 80% !important;
+    margin: auto;
+  }
+
+  .text-tag {
+    color: orange !important;
+    font-size: 1.5em !important;
+    padding: 2em;
+  }
+
+  .footer {
+    padding: 3rem 0;
+  }
+  .upper-footer {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .upper-footer .logo-div {
+    max-width: 100% !important;
+    text-align: center;
+  }
+  .upper-footer .logo-div .logo {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .categories {
+    width: 100% !important;
+    text-align: center;
+    margin-top: 3rem !important;
+  }
+
+  .upper-footer h1 {
+    color: orange;
+  }
+
+  .newsletter {
+    text-align: center;
+  }
+
+  .subscription .color-white {
+    color: #fff;
+  }
+  .email-field {
+    margin: 1em 0;
+  }
+  .lower-footer {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .footer-para {
+    margin-bottom: 1rem !important;
+  }
+
+  .social-icons {
+    justify-content: space-evenly;
+  }
+
+  #customer-section {
+    flex-direction: column;
+  }
+  .customer-intro {
+    margin-bottom: 3rem !important;
+  }
+  .cus-intro-text {
+    margin-bottom: 2rem;
+  }
+  .customer-icons,
+  .customers {
+    max-width: 90% !important;
+  }
+  .gallary-content,
+  .gallary-content .service-title {
+    width: 100% !important;
+  }
+  #gallary {
+    padding: 6rem 0 !important;
+  }
+
+  .service-title,
+  .service-cards {
+    width: 100% !important;
+  }
 }
 
 .title h3 {
