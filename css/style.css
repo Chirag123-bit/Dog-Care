@@ -63,7 +63,7 @@ header {
 
 #head-top {
   display: flex;
-  padding: 1.5em 3%;
+  padding: 1.5em 3% 1.5em 0.5em;
   top: 50px;
   transition: 0.5s ease;
   /* transition: 0.4s; */
@@ -279,6 +279,7 @@ header {
   #head-top.show {
     height: 100vh;
     /* position: fixed; */
+    overflow: hidden;
     top: 0;
     right: 0;
     left: 0;
@@ -297,6 +298,15 @@ header {
     margin-top: 3rem;
     justify-content: space-evenly !important;
   }
+
+  #head-top.show #seen:hover .hidden {
+    /* display: flex; */
+    margin-left: 7rem !important;
+    background-color: transparent !important;
+    color: orange !important;
+    margin-top: -1rem;
+  }
+
   #head-top.show .sticky,
   #head-top.show .logo {
     display: none;
@@ -305,9 +315,6 @@ header {
     width: 80vw;
     flex-direction: row-reverse;
     flex-flow: row-reverse;
-  }
-  #head-top.show .nav-items li {
-    /* padding: 1rem; */
   }
 
   .nav-items.show #head-top.sticky a:hover,
@@ -318,6 +325,9 @@ header {
 
   #head-top.show .nav-items a {
     color: #fff !important;
+  }
+  #head-top.show .hidden a {
+    color: orange !important;
   }
 
   #head-top {
@@ -478,6 +488,14 @@ header {
   }
 }
 @media screen and (max-width: 600px) {
+  #head-top.show #seen:hover .hidden {
+    margin-left: 6rem !important;
+    flex-direction: column;
+    margin-top: -1rem;
+  }
+  #seen:hover .hidden {
+    display: flex !important;
+  }
   .footer .logo-div {
     padding-right: 0 !important;
   }
