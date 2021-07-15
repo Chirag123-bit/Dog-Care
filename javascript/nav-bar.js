@@ -1,6 +1,14 @@
+const openMenu = document.getElementById("hamburger");
+const mainMenu = document.querySelector("#head-top");
+
 window.addEventListener("scroll", function () {
   var header = this.document.querySelector("#head-top");
-  header.classList.toggle("sticky", window.scrollY > 10);
+  if (!header.classList.contains("show")) {
+    header.classList.toggle("sticky", window.scrollY > 10);
+  } else {
+    mainMenu.classList.toggle("show");
+    header.classList.toggle("sticky", window.scrollY > 10);
+  }
 });
 
 window.onload = function () {
@@ -19,3 +27,7 @@ window.onload = function () {
   }
   type();
 };
+
+openMenu.addEventListener("click", () => {
+  mainMenu.classList.toggle("show");
+});

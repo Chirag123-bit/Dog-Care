@@ -65,11 +65,12 @@ header {
   display: flex;
   padding: 1.5em 3%;
   top: 50px;
-  transition: all 0.5s;
-  transition: 0.4s;
+  transition: 0.5s ease;
+  /* transition: 0.4s; */
   width: 100%;
   top: 0;
   z-index: 100000;
+  flex-wrap: wrap;
 }
 .logo {
   display: flex;
@@ -190,7 +191,140 @@ header {
   padding-bottom: 8%;
 }
 
+@media screen and (max-width: 1210px) {
+  .logo {
+    flex: 1;
+  }
+  .nav-bar {
+    flex: 2;
+  }
+}
+
 @media screen and (max-width: 880px) {
+  .fas {
+    font-size: 1rem;
+  }
+  #head-top.sticky a:hover {
+    padding: 0.2rem !important;
+  }
+  .logo {
+    flex: 8 !important;
+  }
+  .logo h1 {
+    font-size: 2rem !important;
+  }
+  .color-white,
+  #moving-text {
+    font-size: 2.6rem !important;
+  }
+  .service-text {
+    text-align: center;
+  }
+  .detail h4 {
+    font-size: 1.5rem;
+  }
+  .detail p {
+    font-size: 0.9rem;
+  }
+  .custom .fa {
+    font-size: 1rem;
+  }
+  #customer-section {
+    width: 100% !important;
+  }
+  .testimonial p {
+    font-size: 0.8rem;
+  }
+  .c-title {
+    font-size: 2rem !important;
+  }
+  .task h6 {
+    font-size: 1rem !important;
+  }
+  .limit-width h4 {
+    font-size: 2rem !important;
+  }
+  .red-read-more {
+    font-size: 0.7rem;
+  }
+
+  .lead {
+    font-size: 1rem !important;
+  }
+  .date {
+    font-size: 0.6rem !important;
+  }
+  .sid {
+    font-size: 1rem !important;
+  }
+  .dog-tasks {
+    max-width: 100%;
+  }
+  .nav-items,
+  .search-bar {
+    flex: 2;
+    display: none;
+  }
+
+  .nav-bar {
+    justify-content: space-around;
+  }
+  .hamburger {
+    display: block !important;
+    cursor: pointer;
+  }
+  #head-top.show .hamburger {
+    padding-top: 0.5rem;
+  }
+  #head-top.show {
+    height: 100vh;
+    /* position: fixed; */
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: 1s ease;
+    flex-direction: column;
+
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+  }
+
+  #head-top.show .nav-items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    justify-content: space-evenly !important;
+  }
+  #head-top.show .sticky,
+  #head-top.show .logo {
+    display: none;
+  }
+  #head-top.show .nav-bar {
+    width: 80vw;
+    flex-direction: row-reverse;
+    flex-flow: row-reverse;
+  }
+  #head-top.show .nav-items li {
+    /* padding: 1rem; */
+  }
+
+  .nav-items.show #head-top.sticky a:hover,
+  #head-top a:hover,
+  .active {
+    border: none;
+  }
+
+  #head-top.show .nav-items a {
+    color: #fff !important;
+  }
+
+  #head-top {
+    justify-content: space-around;
+    align-items: center;
+  }
+
   .about-us {
     flex-direction: column;
     width: 100% !important;
@@ -222,6 +356,7 @@ header {
   .task {
     width: max-content;
     padding-right: 0 !important;
+    padding-left: 0 !important;
   }
 
   .task p {
@@ -334,6 +469,52 @@ header {
   .service-title,
   .service-cards {
     width: 100% !important;
+  }
+  .footer-links h1 {
+    text-align: center !important;
+  }
+  .links {
+    text-align: left !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer .logo-div {
+    padding-right: 0 !important;
+  }
+  .cus-intro-text p {
+    margin-right: 0 !important;
+  }
+  .customer-intro {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+  .service-text,
+  .testimonial,
+  .customers {
+    margin-left: 0rem !important;
+    padding: 0rem !important;
+  }
+  .customer-image {
+    padding: 0 !important;
+  }
+  #head-top.sticky {
+    max-width: 100vw;
+  }
+  .email-field {
+    text-align: left;
+  }
+  .email-field button {
+    width: 18% !important;
+  }
+  .logo h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .color-white {
+    font-size: 1rem !important;
+  }
+  .link {
+    font-size: 0.8rem;
   }
 }
 
@@ -826,4 +1007,19 @@ img,
 a,
 li {
   cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  background-color: transparent;
+  color: orange;
+  cursor: pointer;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.nav-items .fa {
+  color: #fff;
 }
